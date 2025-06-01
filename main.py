@@ -1,10 +1,10 @@
 import os
 import requests
 from bs4 import BeautifulSoup
-from dotenv import load_doenv 
+from dotenv import load_dotenv
 
 
-load_doenv
+load_dotenv()
 
 URL = os.getenv("PARSE_URL", "https://books.toscrape.com/")
 
@@ -29,4 +29,3 @@ if __name__ == "__main__":
     books = parse_book()
     for book in books[:5]:
         print(f"{book['title']} - {book['price']}")
-        
